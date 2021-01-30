@@ -1,0 +1,104 @@
+파이썬 개발자 구직 https://codestates.com/
+​
+1. 노마드코더: 최고. 코딩전반. 현 트렌드까지 잘 알려줌. 매우 유익. 내가 뭘 배워야할지도.
+2. 생활코딩 대학강의 처럼 머신러닝, 객체지향, 알고리즘 등도 모두 잘 설명되어 있음.
+공동
+​
+3. 테크보이워니, 나도코딩: 두분 모두 코딩을 매우 잘하시고 특히 파이썬강의가 좋음 .
+5. 조코딩 : 초보자레벨에서 특히 좋음. 설명을 간결하게 잘하심.
+​
+https://www.youtube.com/watch?v=Es1fQqqxIFQ&list=PLMsa_0kAjjrfYDhzNFLqB8XhSOI0UoIWf
+파이썬 exe 만드는 법
+pip install pyinstaller < 터미널에서 먼저 설치
+pyinstaller -F.\semple.py (팁>> sem 같이 몇 글자를 쓴 다음 탭을 누르면 경로를 포함 자동으로 써짐.
+​
+​
+파이썬 화일 비교, 틀린 점 분석
+https://www.youtube.com/watch?v=dWiqSYpjnxU&list=PLMsa_0kAjjrfYDhzNFLqB8XhSOI0UoIWf&index=2
+​
+​
+​
+파이썬
+[] 리스트
+{} 딕셔너리 : 자료에 이름을 써서 저장한다.
+​
+중고차 = ['K5','white','5000'] #리스트 예제
+중고차[1] = 'black' #리스트 데이터 수정
+​
+중고차2 = {'brand':'bmw','model':'520d' } #딕셔너리 예제
+>원하는 것만 출력할때 print(중고차2['brand'])
+>자료 수정 중고차2['brand'] = 123
+print(중고차[1])
+​
+조건문
+<,>,==(같다),>=
+if  조건식 :
+ 조건식이 참일때 실행할 코드
+​
+재고량 = 10
+print('지금주문가능합니다.')
+​
+if 재고량 > 0;
+print('지금주문가능합니다.')  
+​
+​
+중고차재고 = ['k5','bmw','tico']
+if 'k5' in 중고차 재고 : #'k5'가 중고차재고에 있니?
+print('지금주문가능합니다.')
+else : #그게 아니면
+print('주문불가능함.')
+​
+elif << 찾아볼것.
+​
+반복문
+for i in range(0,10) : #코드를 10번 반복해줌
+print('bmw 있어요')
+​
+반복문을 활용한 자료하나씩 출력하기 : 리스트 자료 하나씩 뽑을때
+중고차재고 = ['k5','bmw','tico']
+for i in 중고차들 :
+print(i)   #i 는 중고차들 안에 있던 하나하나의 데이터이다. 아무렇게나 지정해도 됨
+​
+함수 : 긴코드 짧은 단어로 축약
+def 인사하기() :  #def 함수를 만들겠다. 뒤에는 함수 이름
+print('헬로우')
+​
+​
+def 모자() :
+print()
+​
+​
+def 함수() :
+return 10 #함수 실행 한 후 10을 남겨주세요.
+​
+​
+파이썬의 코드를 파일로 저장하면 모듈
+from cal import mul  #cal 모듈에서 함수 mul을 불러온다.(필요한 함수만 불러온다.)
+from math import *  #math 안에 있는 모든 함수를 쓰겠다.
+​
+모듈안에 있는 함수를 확인하고 싶을때
+import cal
+dir(cal)
+라이브러리 설치
+pip install beautifulsoup4
+​
+https://www.youtube.com/watch?v=kWiCuklohdY&t=1182s
+,와 + 의 차이점  ,는 한칸을 기본적으로 띄운다.(21:18)
+​
+ctrl + / 주석설정 (여러행을 같이 주석처리 가능)
+​
+print(1 !=3) 1은 3과 같지 않다.
+number = number + 2  == number += 2
+​
+로또번호 생성 (42:20)
+from random import *
+print(int(random() * 45)+1)
+​
+print(randrange(1,46)) # 1 ~46 미만의 임의의 값 생성
+print(randint(1,45)) # 1 ~46 미만의 임의의 값 생성  (44:10)
+​
+​
+(1:03:20)
+정수(d), 문자열(s),문자(c)
+​
+1:09:30​
