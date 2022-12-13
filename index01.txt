@@ -1,0 +1,43 @@
+https://www.youtube.com/watch?v=ELTjaKwv0gM
+반응형 웹 PC부터 만들고  모바일
+---14:00 시작---
+1.wizcore.co.kr
+    l_wrapper  를 사용하는 이유 정렬의 역활만.
+2.Mark-up을 하는건 고차원적이다.
+3.컨텐츠에 집중하지 말고 마크업에 집중하라.
+4.figure html 구글링
+
+margin-block-start  end 상하를 의미
+margin-inline-start end 좌우를 의미
+
+5.53:00
+    reset.css
+    normalize.css
+    확인하면서 하자.
+6.1:09:00
+    height 값은 특별한 경우를 제외하고는 주지 말자.
+    컨텐츠 크기 만큼만 잡히게 자연스럽게.
+    버튼은 높이값을 주는 경우가 많다.
+7.1:20:10
+    section header의 높이가 왜 높아졌는가?
+    align-items:stretch가 초기 값이라서 그렇다.
+8.1:33:14
+    반응형 figure
+    aspect-ratio: 1/1; 비윻이 1:1 유지가 된다.
+    이미지의 로드와 상관없이 공간을 확보하고 있다.
+    css cls
+
+    css gradient generator
+
+9.1:55:00
+    왼쪽바
+
+10.2:11:00
+
+---------2:37:30 우측 상단.------
+2:43:30 z-index는 언제 사용하는지 영상 찾아볼것.
+
+11.버튼 작업시 시각성과 사용성을 고려해야 한다.
+    클릭가능한 영역을 많이 잡는다.
+
+    --------2:50:00---

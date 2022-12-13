@@ -1,0 +1,16 @@
+1:50:00
+min-width : 0
+
+2:26:00
+Image Replacement(IR기법)
+    text-indent:-9999px;
+
+href="#" #이 없으면 페이지가 새로고침이 된다.
+
+2:39:40 
+    한 페이내에서 클릭 이동.
+
+2:41:00
+    padding-bottom: 20vh;
+2:41:55
+    scroll-behavior: smooth;

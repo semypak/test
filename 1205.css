@@ -1,0 +1,205 @@
+/* 브라우져 기본 스타일을 확인하고 리셋한다. */
+/* Reset */
+body,
+ul {
+    margin: initial;
+    padding: initial;
+}
+
+h2 {
+    margin: initial;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+/* Variables */
+:root {
+    --color-gray-dark: #333;
+    --color-gray-light: #999;
+    --color-gray-lighten: #f0f0f0;
+    --color-primary: #0263a6;
+    --color-secondary: #0490d2;
+    --color-white: #fff;
+    --line-height: 1.6;
+    --line-height-wide: 1.8;
+}
+
+/* Typography */
+:root {
+    font-family: 'arial';
+    line-height: var(--line-height);
+}
+
+/* Layouts*/
+/* 공통분모를 뽑아내는것이 중요. 유지보수 */
+.wrapper {
+    width: 960px;
+    /* 왼쪽 기준으로 여백으로 취하겠다. */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+/* Components */
+.header {
+    background-color: #0263a6;
+    color: white;
+}
+
+.header-logo {
+    display: inline-block;
+    margin: 40px 0;
+}
+
+.header-menu {
+    background-color: #0490d2;
+    display: flex;
+}
+
+.header-menu li {
+    /* padding: 20px; */
+}
+
+.header-menu li a {
+    padding: 20px;
+    display: block;
+}
+
+.header-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header-menu li a.is_active {
+    background-color: white;
+    color: black;
+}
+
+.header-cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: -40px;
+}
+
+.contents {
+    background-color: var(--color-gray-lighten);
+    padding-bottom: 40px;
+}
+
+.contents-inside {
+    background-color: var(--color-white);
+    padding: 40px;
+}
+
+/* ----레이아웃의 보장에 관한 이해----3:07:00- */
+.container {
+    background-color: rgba(0, 0, 140, 0.2);
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.container-main {
+    border: 5px solid red;
+    flex-grow: 1;
+    /* 3:04:20 사이즈 확보의 개념 */
+    min-width: 0;
+}
+
+.container-sidebar {
+    border: 5px solid blue;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    /* min-width:200px; */
+}
+
+/* -------------------------------------- */
+
+.footer {
+    background-color: var(--color-gray-dark);
+    color: #999;
+    padding: 40px 0;
+}
+
+
+.footer-contents {}
+
+.footer-inside {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contents {
+    margin-left: auto;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-menu>li {}
+
+.footer-menu>li h2 {
+    color: var(--color-white);
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.sns {
+    display: flex;
+    gap: 4px;
+}
+
+.sns-link {
+    background-image: url(images/icon-sprite.png);
+    width: 30px;
+    height: 30px;
+    /* IR 기법 */
+    text-indent: -9999px;
+}
+
+.type_twitter {
+    background-position: left top;
+}
+
+.type_facebook {
+    background-position: center top;
+}
+
+.type_pinterest {
+    background-position: right top;
+}
+
+/* 아이콘이 4개 일경우 2:37:10 */
+
+/* .type_twitter:hover {
+    background-position: left bottom;
+}
+
+.type_facebook:hover {
+    background-position: center bottom;
+}
+
+.type_pinterest:hover {
+    background-position: right bottom;
+} */
+
+.sns-link:hover {
+    background-position-y: bottom;
+}

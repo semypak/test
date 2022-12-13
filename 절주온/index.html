@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(function () {
+        $(".top_menu button").click(function () {
+          $(this).next("ul").toggleClass("on");
+        });
+        $(".sub").hide();
+        $(".gnb > li").mouseenter(function () {
+          $(this).find(".sub").slideDown();
+        });
+        $(".gnb > li").mouseleave(function () {
+          $(this).find(".sub").slideUp();
+        });
+
+        $(".btn_search").click(function () {
+          $(".search_box").fadeIn(500);
+        });
+        $(".search_box>button").click(function () {
+          $(".search_box").fadeOut(500);
+        });
+
+        // .btn_tab 클릭하면. btn_tab 에는 .on를 제거되고
+        // 클릭한 대상에만 .on 붙여줍니다.
+        // const btn = document.getElementsByClassName('btn_tab')
+        // $(".btn_tab")
+
+        $(".btn_tab").click(function () {
+          $(".btn_tab").removeClass("on");
+          $(this).addClass("on");
+        });
+
+        $(".right button").click(function () {
+          $(".right ul").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="moblie">
+      <ul class="gnb"></ul>
+    </div>
+    <div class="search_box">
+      <button>닫기</button>
+      <div>
+        <input type="text" />
+        <input type="submit" value="검색" />
+      </div>
+    </div>
+    <header class="hd">
+      <div class="top_menu">
+        <div class="left">
+          <button>절주온(on)</button>
+          <ul>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <button>대표 sns</button>
+          <ul>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav>
+        <h1>
+          <a href="#"><img src="./img/logo.svg" alt="" /></a>
+        </h1>
+        <!-- ul.gnb>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+        <ul class="gnb">
+          <li>
+            <a href="#">메인메뉴1</a>
+            <ul class="sub">
+              <li><a href="#">1서브1</a></li>
+              <li><a href="#">1서브2</a></li>
+              <li><a href="#">1서브3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">메인메뉴1</a>
+            <ul class="sub">
+              <li><a href="#">2서브1</a></li>
+              <li><a href="#">2서브2</a></li>
+              <li><a href="#">2서브3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">메인메뉴1</a>
+            <ul class="sub">
+              <li><a href="#">3서브1</a></li>
+              <li><a href="#">3서브2</a></li>
+              <li><a href="#">3서브3</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="icons">
+          <div class="btn_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>검색</span>
+          </div>
+          <div class="btn_ham">
+            <i class="fa-solid fa-bars"></i>
+            <span>전체메뉴보기</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="sec1">
+      <!-- .box$*3>{box$} -->
+      <div class="sec1_con">
+        <div class="box1 style_b01">
+          <p>
+            <span>리스타트 캠페인</span>
+          </p>
+          <p>
+            <span>알코올 멈추면</span>
+            <span>우리의 안전이</span>
+            <span>시작됩니다</span>
+          </p>
+          <!-- 가상테그 활용 <img src="" alt="캐릭터" /> -->
+        </div>
+        <div class="box2">
+          <article class="notice_con style_b01">
+            <h2>최신자료</h2>
+            <ul class="notice_list">
+              <li>
+                <a href="#">
+                  <span class="category">발간물</span>
+                  <p class="noti_title">
+                    1공지사항 제목줄 내용이 길 수 있어요. 얼마나 길지 난 몰라요.
+                  </p>
+                  <span class="noti_date">2022-10-18</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="category">발간물</span>
+                  <p class="noti_title">
+                    2공지사항 제목줄 내용이 길 수 있어요. 얼마나 길지 난 몰라요.
+                  </p>
+                  <span class="noti_date">2022-10-18</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span cl#ass="category">발간물</span>
+                  <p class="noti_title">
+                    3공지사항 제목줄 내용이 길 수 있어요. 얼마나 길지 난 몰라요.
+                  </p>
+                  <span class="noti_date">2022-10-18</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="category">발간물</span>
+                  <p class="noti_title">
+                    4공지사항 제목줄 내용이 길 수 있어요. 얼마나 길지 난 몰라요.
+                  </p>
+                  <span class="noti_date">2022-10-18</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+          <a class="banner01 style_b01">
+            <span>절주전문인력</span>
+            <span>양성과정 바로가기</span>
+          </a>
+        </div>
+        <div class="box3">
+          <div class="news_con style_b01">
+            <h2>소통, 이야기를 전해요</h2>
+            <article>
+              <button class="btn_tab">공지사항</button>
+              <ul class="list_con">
+                <li>
+                  <p class="t1">
+                    공지사항 제목공지사항 제목공지사항 제목공지사항 제목공지사항
+                    제목공지사항 제목
+                  </p>
+                  <p class="t2">
+                    공지사항 상세 내용 요약 내용이 길 수 있습니다공지사항 상세
+                    내용 요약 내용이 길 수 있습니다공지사항 상세 내용 요약
+                    내용이 길 수 있습니다공지사항 상세 내용 요약 내용이 길 수
+                    있습니다공지사항 상세 내용 요약 내용이 길 수 있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">
+                    공지사항 상세 내용 요약 내용이 길 수 있습니다공지사항 상세
+                    내용 요약 내용이 길 수 있습니다공지사항 상세 내용 요약
+                    내용이 길 수 있습니다공지사항 상세 내용 요약 내용이 길 수
+                    있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">
+                    공지사항 상세 내용 요약 내용이 길 수 있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+              </ul>
+              <a href="#" class="more">더보기1</a>
+            </article>
+            <article>
+              <button class="btn_tab">소식</button>
+              <ul class="list_con">
+                <li>
+                  <p class="t1">소식 제목</p>
+                  <p class="t2">소식 상세 내용 요약 내용이 길 수 있습니다</p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">소식 상세 내용 요약 내용이 길 수 있습니다</p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">소식 상세 내용 요약 내용이 길 수 있습니다</p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+              </ul>
+              <a href="#" class="more">더보기2</a>
+            </article>
+            <article>
+              <button class="btn_tab on">언론보도</button>
+              <ul class="list_con">
+                <li>
+                  <p class="t1">언론보도 제목</p>
+                  <p class="t2">
+                    언론보도 상세 내용 요약 내용이 길 수 있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">
+                    언론보도 상세 내용 요약 내용이 길 수 있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+                <li>
+                  <p class="t2">
+                    언론보도 상세 내용 요약 내용이 길 수 있습니다
+                  </p>
+                  <span class="t_date">2022-10-18</span>
+                  <a href="#" class="list_more">자세히보기</a>
+                </li>
+              </ul>
+              <a href="#" class="more">더보기3</a>
+            </article>
+          </div>
+          <ul class="icon_link style_b01">
+            <li>
+              <div><img src="./img/link01.svg" alt="아이콘1" /></div>
+              <p>
+                <span>음주조장환경</span>
+                <span>모니터링</span>
+              </p>
+              <a href="#">더보기</a>
+            </li>
+            <li>
+              <div><img src="./img/link02.svg" alt="아이콘2" /></div>
+              <p>
+                <span>음주조장환경</span>
+                <span>모니터링</span>
+              </p>
+              <a href="#">더보기</a>
+            </li>
+            <li>
+              <div><img src="./img/link03.svg" alt="아이콘3" /></div>
+              <p>
+                <span>음주조장환경</span>
+                <span>모니터링</span>
+              </p>
+              <a href="#">더보기</a>
+            </li>
+            <li>
+              <div><img src="./img/link04.svg" alt="아이콘4" /></div>
+              <p>
+                <span>음주조장환경</span>
+                <span>모니터링</span>
+              </p>
+              <a href="#">더보기</a>
+            </li>
+            <li>
+              <div><img src="./img/link05.svg" alt="아이콘5" /></div>
+              <p>
+                <span>음주조장환경</span>
+                <span>모니터링</span>
+              </p>
+              <a href="#">더보기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="foot_top">
+        <div class="left">
+          <a href="#">메뉴1</a>
+          <a href="#">메뉴2</a>
+          <a href="#">메뉴3</a>
+          <a href="#">메뉴4</a>
+        </div>
+        <div class="right">
+          <button>사업별 웹사이트 바로가기</button>
+          <ul>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트1</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <div><img src="./img/flogo01.png" alt="" /></div>
+        <div><img src="./img/flogo.svg" alt="" /></div>
+        <div class="copy">
+          <p>주소:</p>
+          <p>copyright All right reserved. &copy;</p>
+        </div>
+        <div><img src="./img/wa_mark.png" alt="" /></div>
+      </div>
+    </footer>
+  </body>
+</html>

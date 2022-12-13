@@ -1,0 +1,133 @@
+/* Reset */
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS Variables */
+:root {
+    --color-gray-light: #eee;
+    --color-white: white;
+    --color-red: orangered;
+    --color-green: cadetblue;
+    --side-width: calc(-1 * (100vw - 100%) / 2);
+}
+
+/* Typograpyy */
+:root {
+    font-family: arial;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* Layouts */
+.wrapper {
+    width: auto;
+    max-width: 900px;
+    margin: 0 auto;
+    /* border: 10px solid red; */
+}
+
+/* Components */
+body {
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: var(--color-gray-light);
+}
+
+.cover {}
+
+.cover-slides {}
+
+.cover-slides img {
+    display: block;
+    /* height: 200px; */
+
+}
+
+.cover-title {
+    padding: 30px;
+    background-color: var(--color-white);
+}
+
+h1 {
+    color: var(--color-red);
+    line-height: 1;
+    font-size: 8rem;
+    /* background-color: gold; */
+    /* white-space: pre;   보이는데로 띄어쓰기 줄바꾸기 */
+}
+
+h1 strong {
+    color: var(--color-green);
+}
+
+.contents {
+    padding: 40px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.grid-item {
+    background-color: white;
+    box-shadow: 0 0 10px #999;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+}
+
+.grid-item div {
+    padding: 30px;
+}
+
+.grid-item h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+@media (min-width : 800px) {
+    .cover {
+        padding: 30px 0;
+        display: flex;
+    }
+
+    /* 1:41:46 1:55:00*/
+    /* 마진을 %로 계산하면 어느 기준인가? */
+    .cover-slides {
+        margin-left: var(--side-width);
+    }
+
+    .cover-slides img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .grid {
+        flex-direction: row;
+    }
+
+}

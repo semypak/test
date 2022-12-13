@@ -1,0 +1,9 @@
+body {
+    border: 5px solid red;
+    /* height: 100%; */
+}
+
+.cover {
+    background-image: url(images/cover.jpg);
+    height: 100vh;
+}

@@ -1,0 +1,234 @@
+/* Reset */
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  /* all 은 모든 프로포티를 선택,
+  unset 은 브라우저에게 니가 대신 초기화 해 주라. */
+  all: unset;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography */
+/* 프로젝트 그초반에 세팅해 줘야 함. */
+:root {
+  font-size: 10px;
+  font-family: 'arial';
+  line-height: 1.5;
+}
+
+body {
+  /* root 기준으로 계산 15px */
+  font-size: 1.5rem;
+}
+
+/* Variables */
+:root {
+  --color-primary: salmon;
+  --color-red: orangered;
+  --color-black: #000;
+  --color-white: white;
+  --color-gray-lighten: #eee;
+  --color-gray-light: #999;
+  --color-gray-dark: #222;
+  --color-gray: #333;
+  --color-gray-darken: #111;
+}
+
+/* layouts */
+.l_wrapper {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Commons */
+.button {
+  background-color: var(--color-gray-darken);
+  color: var(--color-red);
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.showcase {
+  background-color: var(--color-gray-darken);
+  display: grid;
+  /* 컬럼을 200으로 3개 */
+  /* grid-template-columns: 200px 200px 200px; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  /* 1fr을 3번 반복 하겠다. */
+  gap: 20px;
+}
+
+.showcase-item {
+  background-color: var(--color-gray);
+  color: var(--color-gray-light);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.showcase-item-contents {
+  padding: 10px;
+}
+
+.showcase-item-contents h3 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.showcase-item-footer {
+  padding: 20px;
+}
+
+/* Components */
+body {
+  color: var(--color-white);
+  background-color: var(--color-gray-darken);
+}
+
+.header {
+  background-color: var(--color-gray-dark);
+}
+
+.header-inside {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.header-description {
+  display: flex;
+  align-items: center;
+}
+
+.header-description::before {
+  content: "";
+  width: 4em;
+  height: 1px;
+  margin: 0 1em;
+  opacity: 0.5;
+  background-color: currentColor;
+}
+
+.header-cover {
+  height: 120px;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.contents {
+  padding: 40px 0;
+}
+
+/* 하단작업 1:58:46 */
+.container {
+  /* border: 10px solid purple; */
+  display: flex;
+  gap: 40px;
+  /*gap 을 사용하면 메뉴의 좌우 이동시 자동으로 조절이 됨.
+  margin left를 사용시 리버스 하면 margin right 로 바꿔줘야 함.  */
+  /* flex-direction: row-reverse; */
+}
+
+.container-sidebar {
+  /* background-color: orangered; */
+  /* background-color: rgba(200, 210, 70, 0.2); */
+  flex-basis: 240px;
+  /* 왼쪽 메뉴 사이즈를 200px로 가져감.*/
+  flex-shrink: 0;
+  /* 내가 원하는 사이즈가 보장 , 초기값이 1이다.*/
+}
+
+.container-contents {
+  /* border: 10px solid dodgerblue; */
+  background-color: rgba(0, 200, 200, 0.2);
+  flex-grow: 1;
+  /* 컨텐츠 영역을 끝까지 가져감 */
+}
+
+.fields-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.fields-title::before {
+  content: ' ';
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  /* background-color: dodgerblue; */
+  background-image: url(images/icon.svg);
+}
+
+.fields-list-item {
+  border-top: 1px solid;
+  color: var(--color-primary);
+}
+
+.fields-list-item h3 {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.fields-sub {
+  /* 상 우 하 좌 */
+  margin: 10px 0 20px 20px;
+  color: var(--color-gray-light);
+}
+
+.fields-sub li a {
+  /* background-color: gold; */
+  display: block;
+  padding: 6px 0;
+}
+
+.fields-sub li+li a {
+  /* 2:28:22 인접 형제 선택자*/
+  border-top: 1px solid var(--color-gray-light)
+}
+
+.fields-sub li a:hover {
+  color: var(--color-gray-light);
+}
+
+/* 2:32:52 우측 */

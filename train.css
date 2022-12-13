@@ -1,0 +1,131 @@
+/* Reset */
+figure,
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: initial;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    background-color: #111;
+    color: #ddd;
+}
+
+img,
+video {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+/* Typography */
+:root {
+    font-size: 10px;
+    font-family: 'arial';
+    line-height: 1.6;
+}
+
+/* Components */
+body {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.portrait {
+    aspect-ratio: 16 / 6;
+    overflow: hidden;
+    position: relative;
+}
+
+.portrait::before {
+    content: 'asdf';
+    background-color: gold;
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 20vw;
+    background: linear-gradient(to bottom, rgba(0, 1, 17, 0) 0%, rgba(17, 17, 17, 0.01) 1%, rgba(17, 17, 17, 0.99) 99%, rgba(17, 17, 17, 1) 100%);
+}
+
+.portrait-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 100%;
+}
+
+.portrait-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.main {
+    padding: 40px;
+}
+
+.header,
+.section {
+    box-shadow: inset 0 0 10px red;
+    min-height: 300px;
+}
+
+.header {
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.title {
+    font-size: 10vw;
+    margin-bottom: 40px;
+    font-family: 'Unbounded', cursive;
+    color: #999;
+    line-height: 1.2;
+    font-size: clamp(1.4rem, 10vw, 6.6rem);
+}
+
+.title-headings {
+    color: lime;
+    white-space: nowrap;
+    margin-bottom: -0.5em;
+}
+
+.title-introduce {
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+@media (min-width:960px) {
+    .portrait {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .portrait::before {
+        display: none;
+    }
+
+    .portrait-title {
+        bottom: 0;
+        top: initial;
+        left: 0;
+    }
+
+    .main {
+        margin-left: 50vw;
+    }
+}

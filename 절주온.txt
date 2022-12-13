@@ -1,0 +1,9 @@
+절주온
+body {
+    background-color: #dbe9f6;
+}
+
+하단 칼라 : #f0e7c8
+바디 칼라 : #dbe9f6
+
+@media (max-width:1130px) 

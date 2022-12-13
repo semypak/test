@@ -1,0 +1,188 @@
+/* https: //www.youtube.com/watch?v=N4dosibYlOk&t=4003s */
+/* Reset */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+h1,
+h2,
+h3 {
+    margin: initial;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+
+
+body {
+    font-size: 1.6rem;
+}
+
+/* Typography */
+:root {
+    font-size: 10px;
+    font-family: 'arial';
+    line-height: 1.4;
+}
+
+/* Layouts */
+.l_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Components */
+body {
+    color: #999;
+}
+
+.header {
+    color: orange;
+    position: relative;
+    height: 40vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    /* 최소 변화무쌍한값 최대 */
+    font-size: clamp(1.6rem, 10vw, 20rem);
+    font-family: impact;
+    line-height: 1;
+}
+
+.header-title strong {
+    color: orangered;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+    min-height: 1200px;
+    align-items: flex-start;
+}
+
+.container-sidebar {
+    flex-basis: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.container-contents {
+    flex-grow: 1;
+    min-width: 0;
+    padding-bottom: 20vh;
+    /* box-shadow: inset 0 0 40px red; */
+}
+
+.sidebar {
+    padding: 40px 0;
+}
+
+.sidebar-logo {
+    /* background-color: skyblue; */
+    background-image: url(images/lion.png);
+    display: block;
+    width: 85px;
+    height: 85px;
+    background-size: cover;
+    text-indent: -9999px;
+}
+
+.side-menu {
+    margin: 20px 0;
+    font-size: 3.4rem;
+    color: rebeccapurple;
+}
+
+.section {
+    padding-top: 40px;
+}
+
+.section-title {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.section-contents {
+    background-color: #efefef;
+    padding: 40px;
+    border-radius: 10px 10px 40px 10px;
+    min-height: 80vh;
+}
+
+/* -----------flex box 버젼------------ */
+/* .grid {
+    display: flex;
+    background-color: gold;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid li {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.grid li img {
+    width: 100%;
+} */
+
+/* ----------grid 버젼------------ */
+.grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid li.type_large {
+    grid-column: span 2;
+}
+
+@media (max-width:800px) {
+    .grid li.type_mobile_large {
+        grid-column: span 1;
+    }
+
+}

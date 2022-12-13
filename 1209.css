@@ -1,0 +1,88 @@
+/* https: //www.youtube.com/watch?v=IQLBhI4qpJY&t=663s */
+/* https: //townboard.co.kr/sub01 */
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+
+.wrap {
+    width: 1280px;
+    margin: 200px auto;
+}
+
+/* 타블렛코드 */
+@media (min-width:1000px) and (max-width:1500px) {
+    .wrap {
+        width: 1000px;
+        /* width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box; */
+    }
+}
+
+@media (min-width:0px) and (max-width:999px) {
+    .wrap {
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width:801px) and (max-width:999px) {
+    .img-list__txt {
+        flex: 1;
+    }
+}
+
+@media (min-width:0px) and (max-width:800px) {
+    .img-list li {
+        display: block;
+    }
+
+    .img-list__image {
+        width: 100%;
+    }
+}
+
+.img-list li {
+    display: flex;
+}
+
+.img-list li:nth-child(odd) .img-list__txt {
+    padding-left: 30px;
+}
+
+.img-list li:nth-child(even) .img-list__image {
+    order: 2;
+}
+
+.img-list li:nth-child(even) .img-list__txt {
+    order: 1;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.img-list li+li {
+    padding-top: 80px;
+}
+
+.img-list__image {
+    width: 580px;
+    height: 280px;
+    background: #f1f2f5;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img-list__image img {
+    position: absolute;
+    width: 474px;
+    left: 50%;
+    bottom: 0;
+    /* widht :474 의 반 */
+    transform: translateX(-50%);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 알아보기</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 100%;
+            height: 200px;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: white;
+        }
+
+        .box_1 {
+            background-color: orangered;
+        }
+
+        .box_1 h1 {
+            width: max-content;
+            /* border: 10px solid; */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Box 하단 줄긋기 */
+        .box_1 h1::before {
+            content: '';
+            background-color: black;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .box_2 {
+            display: flex;
+            padding: 40px;
+            background-color: limegreen;
+        }
+
+        .box_3 {
+            background-color: dodgerblue;
+        }
+
+        .animal {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 10px solid white;
+            /* margin-left: -50px; */
+            /* margin-top: -100px; */
+
+        }
+
+        .cat {
+            /* opacity: 0.9999999; */
+            /* transform: translate(0); */
+            /* z-index: 1; */
+        }
+
+        .dog {}
+
+        .rabbit {}
+    </style>
+</head>
+
+<body>
+    <div class="box_1">
+        <h1>BOX 1</h1>
+    </div>
+    <div class="box_2">
+        <img class="animal cat" src="images/cat.jpg">
+        <img class="animal dog" src="images/dog.jpg">
+        <img class="animal rabbit" src="images/rabbit.jpg">
+    </div>
+    <div class="box_3">
+        <h1>BOX 3</h1>
+    </div>
+</body>
+<!-- 앞으로 뜨움
+https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+
+transform:translate(0)
+opacity:0.9999
+position:ralative
+z-index는 position 이 relative or absolute
+
+z-index:-1은 화면에서 가장 뒤로 간다.
+부모에 z-index:1을 해주면 부모에서 바로 뒤로 간다.
+
+flex items 상황에서는 z-index를 position 없이 사용 가능.(아주 특별)
+
+width:max-content // 글자만큼 라인을 만들어 줌. -->
+
+</html>
